@@ -1,147 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>My Portfolio</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0; padding: 0;
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            min-height: 100vh;
-            color: #222;
-        }
-        header {
-            background: rgba(34,34,34,0.95);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        min-height: 100vh;
+        color: #222;
+      }
+      header {
+        background: rgba(34, 34, 34, 0.95);
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+      section {
+        max-width: 800px;
+        margin: 2rem auto;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        color: #fc5c7d;
+      }
+      h1 h2 {
+        color: #222;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      #projects ul li a {
+        transition: color 0.3s ease;
+      }
+
+      #projects ul li a:hover {
+        color: #6a82fb;
+      }
+
+      /* Photo frame effect */
+      #photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .photo-frame {
+        display: inline-block;
+        padding: 18px;
+        border-radius: 70%;
+        background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%);
+        box-shadow: 0 4px 24px rgba(106, 130, 251, 0.18);
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 800px) {
         section {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: rgba(255,255,255,0.95);
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+          padding: 1rem;
         }
-        a {
-            text-decoration: none;
-            color: inherit
-        }
-        a:hover {
-            color: #fc5c7d;
-        }
-        h1 h2 {
-            color: #222;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        #photo img {
+          width: 100%;
+          max-width: 200px;
+          height: auto;
         }
 
-        ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        #projects ul li a {
-            transition: color 0.3s ease;
-        }
-
-        #projects ul li a:hover {
-            color: #6a82fb;
-        }
-
-        /* Photo frame effect */
-        #photo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         .photo-frame {
-            display: inline-block;
-            padding: 18px;
-            border-radius: 70%;
-            background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%);
-            box-shadow: 0 4px 24px rgba(106,130,251,0.18);
-            margin-bottom: 1rem;
+          padding: 6px;
         }
-        @media (max-width: 800px) {
-            section { padding: 1rem; }
-            #photo img {
-                width: 100%;
-                max-width: 200px;
-                height: auto;
-            }
-
-            .photo-frame {
-                padding: 6px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>My Simple Portfolio</h1>
-        <p>Welcome to my personal website!</p>
+      <h1>My Simple Portfolio</h1>
+      <p>Welcome to my personal website!</p>
     </header>
-    
-    <nav style="background:#222; padding: 1rem; text-align:center;">
-        <a href="#photo" style="margin: 0 1rem; color: #fff;">Photo</a>
-        <a href="#about" style="margin: 0 1rem; color: #fff;">About</a>
-        <a href="#whatido" style="margin: 0 1rem; color: #fff;">What I Do</a>
-        <a href="#projects" style="margin: 0 1rem; color: #fff;">Projects</a>
-        <a href="#contact" style="margin: 0 1rem; color: #fff;">Contact</a>
-      </nav>
-      
+
+    <nav style="background: #222; padding: 1rem; text-align: center">
+      <a href="#photo" style="margin: 0 1rem; color: #fff">Photo</a>
+      <a href="#about" style="margin: 0 1rem; color: #fff">About</a>
+      <a href="#whatido" style="margin: 0 1rem; color: #fff">What I Do</a>
+      <a href="#projects" style="margin: 0 1rem; color: #fff">Projects</a>
+      <a href="#contact" style="margin: 0 1rem; color: #fff">Contact</a>
+    </nav>
+
     <section id="photo">
-        <h2>Photo</h2>
-        <img src="IMG_20250505_234931.jpg" alt="My Photo" style="display:block; margin: 0 auto; border-radius: 50%; max-width: 200px;">
+      <h2>Photo</h2>
+      <img
+        src="IMG_20250505_234931.jpg"
+        alt="My Photo"
+        style="
+          display: block;
+          margin: 0 auto;
+          border-radius: 50%;
+          max-width: 200px;
+        "
+      />
     </section>
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm a passionate web developer who loves creating user-friendly websites, learning and playing around new technologies. I enjoy building projects that make a real difference.
-        </p>
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm a passionate web developer who loves creating user-friendly
+        websites, learning and playing around new technologies. I enjoy building
+        projects that make a real difference.
+      </p>
     </section>
     <section id="whatido">
-        <h2>What I Do (Interesting)</h2>
-        <ul>
-            <li>Web Development (Front-End Development)</li>
-            <li>IT Support (Troubleshooting, Installation)</li>
-        </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects (Click the list to see related project website:)</h2>
-            <ul>
-            <li><a href="https://lonelyjonathan537.github.io/Portfolio" target="_blank">Project 1: Portfolio Website</a></li>
-            <li><a href="https://lonelyjonathan537.github.io/Wallpaper/" target="_blank">Project 2: Wallpaper Search</a></li>
-            <li><a href="https://lonelyjonathan537.github.io/Random-Password-Tools/" target="_blank">Project 3: Random Password Generator Tools</a></li>
-            <li><a href="https://lonelyjonathan537.github.io/Introduction-myself/" target="_blank">Project 4: Introduction Myself</a></li>
-            <li><a href="https://lonelyjonathan537.github.io/Resume/" target="_blank">Project 5: Resume</a></li>
-            <li><a href="https://finalyearproject.rf.gd/index.php" target="_blank">Project 6: Final Year Project (Is safe to visit cause we don't have SSL Certificate)</a></li>
-            <li><a href="https://lonelyjonathan537.github.io/learning-journey/" target="_blank">Project 7: My Learning Journey</a></li>
-            </ul>
-        </section>
+      <h2>What I Do (Interesting)</h2>
+      <ul>
+        <li>Web Development (Front-End Development)</li>
+        <li>IT Support (Troubleshooting, Installation)</li>
+      </ul>
+    </section>
+    <section id="projects">
+      <h2>Projects (Click the list to see related project website:)</h2>
+      <ul>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/Portfolio"
+            target="_blank"
+            >Project 1: Portfolio Website</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/Wallpaper/"
+            target="_blank"
+            >Project 2: Wallpaper Search</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/Random-Password-Tools/"
+            target="_blank"
+            >Project 3: Random Password Generator Tools</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/Introduction-myself/"
+            target="_blank"
+            >Project 4: Introduction Myself</a
+          >
+        </li>
+        <li>
+          <a href="https://lonelyjonathan537.github.io/Resume/" target="_blank"
+            >Project 5: Resume</a
+          >
+        </li>
+        <li>
+          <a href="https://finalyearproject.rf.gd/index.php" target="_blank"
+            >Project 6: Final Year Project (Is safe to visit cause we don't have
+            SSL Certificate)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/learning-journey/"
+            target="_blank"
+            >Project 7: My Learning Journey</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://lonelyjonathan537.github.io/File-Archiver/"
+            target="_blank"
+            >Project 7: File Archiver Download Page</a
+          >
+        </li>
+      </ul>
+    </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <p>Name: Jonathan Chong Fung Bin</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:adresonjohn8@gmail.com">adresonjohn8@gmail.com (Secondary)</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:chong5266john@gmail.com">chong5266john@gmail.com (Primary)</a></p>
-            <p>Phone: <a href="tel:+60148530789">014 - 853 0789</a></p>
-            <p>Github: <a href="https://github.com/LonelyJonathan537">My Github Pages</a></p>
-        </form>
+      <h2>Contact</h2>
+      <form>
+        <p>Name: Jonathan Chong Fung Bin</p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:adresonjohn8@gmail.com"
+            >adresonjohn8@gmail.com (Secondary)</a
+          >
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:chong5266john@gmail.com"
+            >chong5266john@gmail.com (Primary)</a
+          >
+        </p>
+        <p>Phone: <a href="tel:+60148530789">014 - 853 0789</a></p>
+        <p>
+          Github:
+          <a href="https://github.com/LonelyJonathan537">My Github Pages</a>
+        </p>
+      </form>
     </section>
 
-    <footer style="text-align:center; padding:1rem; background:#222; color:#fff;">
-        © 2025 Jonathan Chong Fung Bin. All rights reserved.
+    <footer
+      style="text-align: center; padding: 1rem; background: #222; color: #fff"
+    >
+      © 2025 Jonathan Chong Fung Bin. All rights reserved.
     </footer>
-    
-</body>
+  </body>
 </html>
